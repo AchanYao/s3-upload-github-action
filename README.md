@@ -21,11 +21,12 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Upload file to bucket
-        uses: koraykoska/s3-upload-github-action@master
+        uses: AchanYao/s3-upload-github-action@v0.1.1
         env:
           FILE: ./releases/
           S3_ENDPOINT: 'ams3.digitaloceanspaces.com'
           S3_BUCKET: ${{ secrets.S3_BUCKET }}
           S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
           S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+          S3_PREFIX: 'releases/'
 ```

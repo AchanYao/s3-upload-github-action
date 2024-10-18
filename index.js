@@ -7,6 +7,7 @@ const s3 = new aws.S3({
   endpoint: spacesEndpoint,
   accessKeyId: process.env.S3_ACCESS_KEY_ID,
   secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+  region: process.env.S3_REGION,
 });
 
 const uploadFile = (fileName) => {
