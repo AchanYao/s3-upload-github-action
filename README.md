@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Upload file to bucket
-        uses: AchanYao/s3-upload-github-action@v0.1.1
+        uses: AchanYao/s3-upload-github-action@v0.1.2
         env:
           FILE: ./releases/
           S3_ENDPOINT: 'ams3.digitaloceanspaces.com'

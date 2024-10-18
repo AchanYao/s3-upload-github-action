@@ -1,6 +1,6 @@
 FROM node:20 as builder
 
-LABEL "version"="0.1.1"
+LABEL "version"="0.1.2"
 LABEL "repository"="https://github.com/AchanYao/s3-upload-github-action"
 LABEL "homepage"="https://github.com/AchanYao/s3-upload-github-action"
 LABEL "maintainer"="AchanYao <yyx1310059081@gmail.com>"
