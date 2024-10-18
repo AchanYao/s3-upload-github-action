@@ -1,9 +1,9 @@
-FROM node:12.10.0-alpine
+FROM node:20 as builder
 
-LABEL "version"="0.1.0"
-LABEL "repository"="https://github.com/koraykoska/s3-upload-github-action"
-LABEL "homepage"="https://github.com/koraykoska/s3-upload-github-action"
-LABEL "maintainer"="Koray Koska <koray@koska.at>"
+LABEL "version"="0.1.1"
+LABEL "repository"="https://github.com/AchanYao/s3-upload-github-action"
+LABEL "homepage"="https://github.com/AchanYao/s3-upload-github-action"
+LABEL "maintainer"="AchanYao <yyx1310059081@gmail.com>"
 
 # Add the entry point
 RUN mkdir /app
@@ -16,6 +16,11 @@ RUN chmod +x /app/entrypoint.sh
 RUN cd /app
 WORKDIR /app
 RUN npm install
+
+FROM node:20-slim as runner
+
+COPY --from=builder /app /app
+WORKDIR /app
 
 # Load the entry point
 ENTRYPOINT ["/app/entrypoint.sh"]

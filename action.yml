@@ -1,6 +1,6 @@
-name: "S3 Upload"
+name: "AchanYao/S3 Upload"
 description: "Upload files and directories to S3 compatible cloud buckets"
-author: "Koray Koska <koray@koska.at>"
+author: "AchanYao <yyx1310059081@gmail.com>"
 runs:
   using: docker
   image: Dockerfile
